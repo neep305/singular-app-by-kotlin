@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Add your own apikey and secret. (DEVELOPER TOOLS > SDK KEYS)
-        val singularConfig = SingularConfig("se_team_9b3431b0", "bcdee06e8490949422c071437da5c5ed")
+        val singularConfig = SingularConfig("<sdk_key>", "<secret>")
             .withSingularLink(intent) {
                 params ->
                 val deeplink = params.deeplink
