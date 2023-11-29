@@ -1,4 +1,44 @@
 <resources>
     <string name="app_name">SingularAppByKotlin</string>
     <string name="long_text">Integrating the Google Mobile Ads SDK into an app is the first step toward displaying ads and earning revenue. Once you\'ve integrated the SDK, you can choose an ad format (such as native or rewarded video) and follow the steps to implement it.</string>
+    <string name="title_home">Home</string>
+    <string name="title_standard_event">Standard Event</string>
+    <string name="title_dashboard">Ads</string>
+    <string name="title_notifications">DeepLink</string>
+    <string name="title_iap">In App Purchase</string>
+    <string name="title_iap_short">IAP</string>
+    <string name="title_deeplink">Deeplink</string>
+    <string name="title_passthrough">Passthrough</string>
+    <string name="title_isDeferred">isDeferred</string>
+    <string name="title_queryParams">Params</string>
+    <string name="title_web">WebView</string>
+    <string name="title_activity_test">TestActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="btn_revenue_event">Revenue Event</string>
+    <string name="btn_in_app_event">In app Event</string>
+    <string name="btn_in_app_ads">In App Ads</string>
+    <string name="btn_send_amplitude_event">Send Amplitude Event</string>
+    <string name="btn_move_to_webview_tab">Move To Webview Tab</string>
+
+    <!-- Hint description -->
+    <string name="hint_iap_price">In App Purchase Revenue</string>
+    <string name="hint_iaa_price">In App Ads Revenue ex) 1.5</string>
+    <string name="hint_event_name_for_iap">EventName for in-app or revenue</string>
+    <string name="hint_price">Price eg. 10000, 0.99</string>
+
+    <string name="label_purchase_without_receipt">PurchaseWithoutReceipt</string>
+    <string name="label_cancel_purchase">Cancel purchase</string>
+
+    <string name="radio_mediation_admob">Admob</string>
+    <string name="radio_mediation_applovin">AppLovin</string>
+    <string name="radio_mediation_other">Other(Generic)</string>
+    <string name="logo">LOGO</string>
 </resources>

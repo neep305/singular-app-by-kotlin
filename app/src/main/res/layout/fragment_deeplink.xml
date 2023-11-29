@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.deeplink.DeeplinkFragment">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:src="@drawable/singular_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvDeeplinkTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/logo" />
+    <TextView
+        android:id="@+id/tvDeeplinkTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_deeplink"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/singular_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+    <EditText
+        android:id="@+id/etDeeplinkValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapSentences|textMultiLine"
+        android:hint="@string/title_deeplink"
+        android:scrollHorizontally="false"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/tvDeeplinkTitle"
+        android:autofillHints="@string/title_deeplink" />
+    <TextView
+        android:id="@+id/tvQueryParams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_queryParams"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/singular_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDeeplinkValue" />
+    <EditText
+        android:id="@+id/etQueryParams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title_queryParams"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/tvQueryParams"/>
+    <TextView
+        android:id="@+id/tvPassthrough"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_passthrough"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/singular_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etQueryParams"/>
+    <EditText
+        android:id="@+id/etPassthrough"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapSentences|textMultiLine"
+        android:hint="@string/title_passthrough"
+        android:scrollHorizontally="false"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/tvPassthrough"
+        android:autofillHints="@string/title_passthrough" />
+    <TextView
+        android:id="@+id/tvIsDeferred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_isDeferred"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/singular_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPassthrough" />
+    <EditText
+        android:id="@+id/etIsDeferred"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title_isDeferred"
+        android:enabled="false"
+        app:layout_constraintTop_toBottomOf="@+id/tvIsDeferred"
+        android:autofillHints="@string/title_isDeferred" />
+</androidx.constraintlayout.widget.ConstraintLayout>
