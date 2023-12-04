@@ -45,6 +45,9 @@ class HomeFragment : Fragment() {
     ): View? {
         binding = FragmentHomeBinding.inflate(layoutInflater, container, false) //inflater.inflate(R.layout.fragment_home, container, false)
 
+        etEventName = binding.eventNameText
+        etPrice = binding.priceText
+
         val adapter = ArrayAdapter(
             requireContext(),
             android.R.layout.simple_spinner_item,

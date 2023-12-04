@@ -19,7 +19,7 @@
         android:id="@+id/navigation_iap"
         android:name="com.jason.singularappbykotlin.ui.iap.IapFragment"
         android:label="@string/title_iap"
-        tools:layout="@layout/fragment_inweb" />
+        tools:layout="@layout/fragment_iap" />
 
     <fragment
         android:id="@+id/navigation_ads"

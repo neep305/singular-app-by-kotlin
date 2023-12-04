@@ -5,9 +5,13 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.jason.singularappbykotlin.databinding.ActivityMainBinding
+import com.jason.singularappbykotlin.ui.home.HomeFragment
 import com.singular.sdk.Singular
 import com.singular.sdk.SingularConfig
 import com.singular.sdk.SingularLinkHandler
@@ -16,23 +20,22 @@ import com.singular.sdk.SingularLinkParams
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         // 바인딩 객체 획득
-        val binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
 
         setContentView(binding.root)// setContentView(R.layout.activity_main)
 
-        var navView = findViewById<BottomNavigationView>(R.id.nav_view)
-        // 뷰 객체 이용
-//        binding.visibleBtn.setOnClickListener {
-//            binding.targetView.visibility = View.VISIBLE
-//        }
-//        binding.invisibleBtn.setOnClickListener {
-//            binding.targetView.visibility = View.INVISIBLE
-//        }
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
+        navController = navHostFragment.navController
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.nav_view)
+        bottomNavigationView.setupWithNavController(navController)
+
         // Add your own apikey and secret. (DEVELOPER TOOLS > SDK KEYS)
         val singularConfig = SingularConfig(Constants.API_KEY, Constants.SECRET)
             .withCustomUserId("jasonnam1234")
@@ -67,5 +70,10 @@ class MainActivity : AppCompatActivity() {
                 runOnUiThread { navController.navigate(targetTabIdx, bundle) }
             }
         Singular.init(this, singularConfig)
+    }
+
+    fun changeFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(binding.container.id, fragment).commit()
     }
 }
