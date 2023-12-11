@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize">
+    android:layout_height="match_parent">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -30,42 +29,3 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/mobile_navigation" />
 </androidx.constraintlayout.widget.ConstraintLayout>
-<!--<LinearLayout android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
-<!--    android:orientation="vertical">-->
-<!--    <Button-->
-<!--        android:id="@+id/visibleBtn"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="visible"></Button>-->
-<!--    <TextView-->
-<!--        android:id="@+id/targetView"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="hello world"-->
-<!--        android:background="#FF0000"-->
-<!--        android:textColor="#FFFFFF"></TextView>-->
-<!--    <Button-->
-<!--        android:id="@+id/invisibleBtn"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="invisible"></Button>-->
-<!--    <TextView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/long_text"-->
-<!--        android:singleLine="true"-->
-<!--        android:ellipsize="middle">-->
-<!--    </TextView>-->
-<!--    <View-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="2dp"-->
-<!--        android:background="#000000"></View>-->
-<!--    <TextView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="@string/long_text"-->
-<!--        android:maxLines="3"-->
-<!--        android:ellipsize="end"></TextView>-->
-<!--</LinearLayout>-->
